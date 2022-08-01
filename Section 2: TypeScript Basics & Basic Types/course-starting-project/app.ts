@@ -1,3 +1,22 @@
+// the pipe symbol is a good example for union types and makes the types be flexible
+function combine(input1: number | string, input2: number | string) {
+  let result 
+  
+  if (typeof input1 === 'number' && typeof input2 === 'number')  {
+    result = input1 + input2;
+  } else {
+    result = input1.toString() + input2.toString()
+  }
+  
+  return result
+}
+
+const combinedAges = combine(30, 26)
+console.log ({combinedAges})
+
+const combinedNames = combine("Arvin", "Hisui")
+console.log({combinedNames})
+
 // specialized object type
 // const person: {
 //   name: string;
@@ -32,6 +51,8 @@ const person
 // person.role.push('admin')
 // person.role[1]= 10;
 
+// not really suggested when developing only when you're not sure about the data
+let anyType: any
 let favoriteActivites: string[];
 favoriteActivites = ["Sports"];
 

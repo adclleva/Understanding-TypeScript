@@ -9,8 +9,5 @@
     "lite": "lite-server"
   },
   "author": "Arvin Lleva",
-  "license": "ISC",
-  "devDependencies": {
-    "lite-server": "^2.6.1"
-  }
+  "license": "ISC"
 }
