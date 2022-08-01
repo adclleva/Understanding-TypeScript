@@ -11,3 +11,10 @@ userInput = "Arvin";
 if (typeof userInput === "string") {
   userName = userInput;
 }
+
+// example of never type as it will "crash" the script, won't return anything, and can be used for error cases
+function generateError(message: string, code: number): never {
+  throw { message: message, errorCode: code };
+}
+
+generateError("An error occured!", 500);
