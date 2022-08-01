@@ -2,6 +2,23 @@
 type Combinable = number | string;
 type ConversionDescriptor = "as-number" | "as-text";
 
+// example of an alias of a possibly complese object type
+type User = { name: string; age: number };
+const u1: User = { name: "Max", age: 30 };
+
+// exampled of a return type
+function add(number1: number, number2: number): number {
+  return number1 + number2;
+}
+
+// example of return void type
+// a return undefined type should only be used when you are using undefined explicitly
+function printResult(num: number): void {
+  console.log("Result: " + num);
+}
+
+console.log(printResult(12));
+
 // the pipe symbol is a good example for union types and makes the types be flexible
 // resultConversion is an example of literal types to be specific versions of the types
 function combine(input1: Combinable, input2: Combinable, resultConversion: ConversionDescriptor) {

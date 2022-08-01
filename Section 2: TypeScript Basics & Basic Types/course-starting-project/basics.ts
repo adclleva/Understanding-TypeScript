@@ -16,9 +16,9 @@ someNumber = 3;
 
 const number1 = 5;
 const number2 = 2.8;
-const printResult = true;
+// const printResult = true;
 const resultPhrase = "Result is ";
 
-const result = add(number1, number2, printResult, resultPhrase);
+// const result = add(number1, number2, printResult, resultPhrase);
 
-console.log(result);
+// console.log(result);
