@@ -1,6 +1,10 @@
+// example type aliases  which is useful for multiple union types
+type Combinable = number | string;
+type ConversionDescriptor = "as-number" | "as-text";
+
 // the pipe symbol is a good example for union types and makes the types be flexible
 // resultConversion is an example of literal types to be specific versions of the types
-function combine(input1: number | string, input2: number | string, resultConversion: "as-number" | "as-text") {
+function combine(input1: Combinable, input2: Combinable, resultConversion: ConversionDescriptor) {
   let result;
 
   if ((typeof input1 === "number" && typeof input2 === "number") || resultConversion === "as-number") {
