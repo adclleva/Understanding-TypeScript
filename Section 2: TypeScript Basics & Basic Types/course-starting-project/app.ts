@@ -11,6 +11,15 @@ function add(number1: number, number2: number): number {
   return number1 + number2;
 }
 
+// example of function types
+// let combineValues: Function;
+let combineValues: (a: number, b: number) => number;
+
+combineValues = add;
+// combineValues = 5
+
+console.log(combineValues(1, 1));
+
 // example of return void type
 // a return undefined type should only be used when you are using undefined explicitly
 function printResult(num: number): void {
@@ -18,6 +27,8 @@ function printResult(num: number): void {
 }
 
 console.log(printResult(12));
+
+// combineValues = printResult // -> this will send an error because of the declared function type
 
 // the pipe symbol is a good example for union types and makes the types be flexible
 // resultConversion is an example of literal types to be specific versions of the types
