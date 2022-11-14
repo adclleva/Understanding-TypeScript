@@ -99,5 +99,14 @@
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
-  }
+  },
+  "exclude": [
+    "node_modules" // we don't want to compile the node_modes, but this is a default
+  ],
+  "include": [
+    "app.ts",
+    "analytics.ts"
+  ],
+  "files": ["app.ts"]
+
 }
